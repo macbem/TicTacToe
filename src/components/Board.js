@@ -12,7 +12,7 @@ export class Board extends Component {
       winner: null,
       history: []
     };
-  }w
+  }
   didPlayerWin = (player) => {
     const squares = this.state.squares;
     const squareRows = [ squares.slice(0,3), squares.slice(3,6), squares.slice(6,9) ];
