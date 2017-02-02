@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { App } from './components/App';
+import { TicTacToe } from './components/TicTacToe';
 import './index.css';
 
 ReactDOM.render(
-  <App />,
+  <TicTacToe />,
   document.getElementById('root')
 );

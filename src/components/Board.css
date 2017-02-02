@@ -6,4 +6,30 @@
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
+  position: relative;
+}
+.Board::after, .Board::before {
+  user-select: none;
+  -webkit-user-select: none;
+  pointer-events: none;
+  position: absolute;
+  background: linear-gradient(to bottom, white, white) no-repeat 0 0;
+  background-size: 0 100%;
+  top: 50%;
+	left: -20%;
+  width: calc(1.41421356237	* 297px);
+  height: 2px;
+  transition: .5s background-size ease;
+  content: "";
+  transform-origin: 50% 0%;
+}
+.Board::after {
+  transform: rotateZ(-45deg);
+}
+.Board::before {
+  transform: rotateZ(45deg);
+}
+.Board.inactive::after,
+.Board.inactive::before {
+  background-size: 100% 100%;
 }

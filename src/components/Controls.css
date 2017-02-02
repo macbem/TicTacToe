@@ -1,0 +1,28 @@
+.Controls {
+  width: 300px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin: 30px auto;
+}
+
+button {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 14px;
+  letter-spacing: 1px;
+  outline: none;
+  padding-bottom: 7.5px;
+  cursor: pointer;
+  border-bottom: 1px solid transparent;
+  transition: .2s border-bottom-color;
+}
+
+button:hover {
+  border-bottom: 1px solid white;
+}

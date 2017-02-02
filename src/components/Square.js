@@ -1,15 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './Square.css';
 
-export class Square extends Component {
-  
-  handleClick = () => this.props.val ? false : this.props.setValue(this.props.index)
-
-  render() {
-    return (
-      <div className="Square" onClick={this.handleClick}>
-        {this.props.val ? this.props.val : ''}
-      </div>
-    )
-  }
+export const Square = (props) => {
+  const handleClick = () => props.val ? false : props.setValue(props.index);
+  const status = props.val ? ` ${props.val}-square` : '';
+  return (
+    <div className={`Square${status}`} onClick={handleClick}>
+      {props.val ? props.val : ''}
+    </div>
+  )
 }

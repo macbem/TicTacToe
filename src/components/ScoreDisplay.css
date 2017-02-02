@@ -1,0 +1,36 @@
+.ScoreDisplay {
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.x-element,
+.o-element {
+  font-weight: 900;
+  font-size: 40px;
+  transition: .3s color;
+}
+.x-element {
+  margin-right: 10px;
+}
+.o-element {
+  margin-left: 10px;
+}
+.x-playing .x-element,
+.x-won .x-element {
+  color: #00B743;
+}
+.o-playing .o-element,
+.o-won .o-element {
+  color: #FF2046;
+}
+[class^="score-of"] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+}
+.score-of-o {
+  flex-direction: row-reverse;
+}

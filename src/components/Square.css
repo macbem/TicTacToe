@@ -4,8 +4,35 @@
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
   box-sizing: border-box;
   align-items: center;
   font-size: 40px;
-  border: 2px solid black;
+}
+.o-square {
+  /*color: #20FF49;*/
+  color: #FF2046;
+  /*color: #E2442F;*/
+}
+.x-square {
+  /*color: #FF2046;*/
+  color: #00B743;
+}
+.Square:nth-of-type(2),
+.Square:nth-of-type(5),
+.Square:nth-of-type(8) {
+  border-left: 1px solid #131313;
+  border-right: 1px solid #131313;
+}
+.Square:nth-of-type(1),
+.Square:nth-of-type(2),
+.Square:nth-of-type(3) {
+  border-bottom: 1px solid #131313;
+}
+.Square:nth-of-type(7),
+.Square:nth-of-type(8),
+.Square:nth-of-type(9) {
+  border-top: 1px solid #131313;
 }
