@@ -1,5 +1,5 @@
 export default function validate() {
-  const squares = this.state.squares;
+  const {squares, currentPlayer} = this.state;
 
   const squareRows = [ squares.slice(0,3), squares.slice(3,6), squares.slice(6,9) ];
 
@@ -14,15 +14,21 @@ export default function validate() {
     [ squares[2], squares[5], squares[8] ]
   ];
 
-  const combinations = [
-    crossedSquares,
-    squareColumns,
-    squareRows
+  const winScenarios = [
+    { name: "intersection", tests: crossedSquares },
+    { name: "column", tests: squareColumns },
+    { name: "row", tests: squareRows}
   ];
 
-  const currentPlayer = this.state.isXnext ? 'o' : 'x';
+  const validateScenario = (el) => el.filter( (item) => item === currentPlayer ).length === 3;
 
-  const result = combinations.some( (arr) => arr.some( (el) => el.filter( (item) => item === currentPlayer ).length === 3 ) );
+  for(let scenario of winScenarios) {
+    for(let i = 0; i < scenario.tests.length; ++i) {
+      if( validateScenario( scenario.tests[i] ) ) {
+        return `${scenario.name}-${++i}`;
+      }
+    }
+  }
 
-  return result;
+  return false;
 }
