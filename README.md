@@ -3,3 +3,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 A simple Tic Tac Toe app.
 
 Run it with npm install && npm start on localhost:3000.
+
+Planned features:
+- multiplayer over Websockets

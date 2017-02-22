@@ -7,11 +7,11 @@ export const ScoreDisplay = (props) => {
     <div className={`${status} ScoreDisplay`}>
         <div className="score-of-x">
           <span className="x-element">X</span>
-          <span className="scoreValue">{props.scores.x}</span>
+          <span className="scoreValue">{props.score.x}</span>
         </div>
         <div className="score-of-o">
           <span className="o-element">O</span>
-          <span className="scoreValue">{props.scores.o}</span>
+          <span className="scoreValue">{props.score.o}</span>
         </div>
     </div>
   )
