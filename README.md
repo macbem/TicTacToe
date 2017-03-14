@@ -6,3 +6,5 @@ Run it with npm install && npm start on localhost:3000.
 
 Planned features:
 - multiplayer over Websockets
+
+Demo -> [http://react-tictactoe.surge.sh/](http://react-tictactoe.surge.sh/)
